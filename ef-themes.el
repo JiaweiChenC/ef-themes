@@ -984,7 +984,7 @@ text should not be underlined as well) yet still blend in."
     `(elisp-shorthand-font-lock-face ((,c :inherit (italic font-lock-preprocessor-face))))
     `(error ((,c :inherit bold :foreground ,err)))
     `(escape-glyph ((,c :foreground ,warning)))
-    `(fringe ((,c :background ,bg-fringe :foreground ,fg-fringe)))
+    ;; `(fringe ((,c :background ,bg-fringe :foreground ,fg-fringe)))
     `(header-line ((,c :inherit ef-themes-ui-variable-pitch :background ,bg-dim)))
     `(header-line-inactive ((,c :inherit (ef-themes-ui-variable-pitch shadow))))
     `(header-line-highlight ((,c :inherit highlight)))
