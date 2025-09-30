@@ -1304,10 +1304,10 @@ text should not be underlined as well) yet still blend in."
     `(dictionary-word-definition-face (( )))
     `(dictionary-word-entry-face ((,c :inherit font-lock-comment-face)))
 ;;;; diff-hl
-    `(diff-hl-change ((,c :background ,bg-changed-refine)))
-    `(diff-hl-delete ((,c :background ,bg-removed-refine)))
-    `(diff-hl-insert ((,c :background ,bg-added-refine)))
-    `(diff-hl-reverted-hunk-highlight ((,c :background ,fg-main :foreground ,bg-main)))
+    ;; `(diff-hl-change ((,c :background ,bg-changed-refine)))
+    ;; `(diff-hl-delete ((,c :background ,bg-removed-refine)))
+    ;; `(diff-hl-insert ((,c :background ,bg-added-refine)))
+    ;; `(diff-hl-reverted-hunk-highlight ((,c :background ,fg-main :foreground ,bg-main)))
 ;;;; diff-mode
     `(diff-added ((,c :background ,bg-added :foreground ,fg-added)))
     `(diff-changed ((,c :background ,bg-changed :foreground ,fg-changed :extend t)))
