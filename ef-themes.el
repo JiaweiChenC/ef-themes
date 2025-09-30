@@ -1308,6 +1308,12 @@ text should not be underlined as well) yet still blend in."
     ;; `(diff-hl-delete ((,c :background ,bg-removed-refine)))
     ;; `(diff-hl-insert ((,c :background ,bg-added-refine)))
     ;; `(diff-hl-reverted-hunk-highlight ((,c :background ,fg-main :foreground ,bg-main)))
+    ;; For fringe rendering: diff-hl uses the face *foreground* to color the bitmap.
+    ;; Inherit semantic colors from the theme and drop backgrounds (keeps margin OK too).
+    `(diff-hl-change ((,c :inherit warning :background unspecified)))
+    `(diff-hl-delete ((,c :inherit error   :background unspecified)))
+    `(diff-hl-insert ((,c :inherit success :background unspecified)))
+    `(diff-hl-reverted-hunk-highlight ((,c :background ,fg-main :foreground ,bg-main)))
 ;;;; diff-mode
     `(diff-added ((,c :background ,bg-added :foreground ,fg-added)))
     `(diff-changed ((,c :background ,bg-changed :foreground ,fg-changed :extend t)))
