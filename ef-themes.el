@@ -71,6 +71,7 @@
     ef-maris-light
     ef-melissa-light
     ef-reverie
+    ef-rose-pine-dawn
     ef-spring
     ef-summer
     ef-trio-light
