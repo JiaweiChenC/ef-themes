@@ -65,6 +65,7 @@
     ef-duo-light
     ef-eagle
     ef-elea-light
+    ef-filter-sun
     ef-frost
     ef-kassio
     ef-light
