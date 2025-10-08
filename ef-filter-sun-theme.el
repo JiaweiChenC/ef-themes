@@ -139,7 +139,7 @@
       (bg-completion      "#ded5d0")
       (bg-hover           "#ebe08f")
       (bg-hover-secondary "#edc9ea")
-      (bg-hl-line         "#faf2ea")
+      (bg-hl-line         "#f0e4d7")
       (bg-paren           "#d2c9c4")
       (bg-err             "#f4d8d0") ; check with err
       (bg-warning         "#f5edaf") ; check with warning
@@ -220,7 +220,7 @@
 
 ;;;; Prose mappings
 
-      (prose-code blue)
+      (prose-code yellow-warmer)
       (prose-done green)
       (prose-macro green)
       (prose-metadata fg-dim)
