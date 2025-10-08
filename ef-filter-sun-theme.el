@@ -139,7 +139,7 @@
       (bg-completion      "#ded5d0")
       (bg-hover           "#ebe08f")
       (bg-hover-secondary "#edc9ea")
-      (bg-hl-line         "#fdf7f3")
+      (bg-hl-line         "#faf2ea")
       (bg-paren           "#d2c9c4")
       (bg-err             "#f4d8d0") ; check with err
       (bg-warning         "#f5edaf") ; check with warning
@@ -179,7 +179,7 @@
       (identifier yellow)
       (prompt magenta)
 
-      (bg-region "#d2c9c4")
+      (bg-region "#e8ddd8")
       (fg-region unspecified)
 
 ;;;; Code mappings
