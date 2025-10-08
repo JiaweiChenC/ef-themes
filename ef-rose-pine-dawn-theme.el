@@ -349,3 +349,4 @@ further details)."
   (provide-theme 'ef-rose-pine-dawn))
 
 ;;; ef-rose-pine-dawn-theme.el ends here
+

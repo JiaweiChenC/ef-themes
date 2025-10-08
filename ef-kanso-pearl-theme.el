@@ -220,7 +220,7 @@
 
 ;;;; Prose mappings
 
-      (prose-code yellow-cooler)
+      (prose-code green-cooler)
       (prose-done green)
       (prose-macro green)
       (prose-metadata fg-dim)
