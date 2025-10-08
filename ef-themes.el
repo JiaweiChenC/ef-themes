@@ -67,6 +67,7 @@
     ef-elea-light
     ef-filter-sun
     ef-frost
+    ef-kanso-pearl
     ef-kassio
     ef-light
     ef-maris-light
