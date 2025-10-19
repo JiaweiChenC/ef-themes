@@ -50,7 +50,7 @@
       (bg-main     "#f8efe7")
       (fg-main     "#2c232e")
       (bg-dim      "#ecddd0")
-      (fg-dim      "#72696d")
+      (fg-dim      "#a09a9c")
       (bg-alt      "#fdf7f3")
       (fg-alt      "#92898a")
 
