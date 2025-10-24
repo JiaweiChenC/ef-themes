@@ -150,6 +150,7 @@
       (comment fg-dim)
       (constant magenta)
       (fnname green-cooler)
+      (fncall blue) ; VSCode gruvbox uses blue-ish for function calls
       (keyword red)
       (preprocessor yellow-cooler)
       (docstring yellow-warmer)
@@ -283,3 +284,4 @@
 
   (ef-themes-theme ef-gruvbox ef-gruvbox-palette ef-gruvbox-palette-overrides)
   (provide-theme 'ef-gruvbox))
+
