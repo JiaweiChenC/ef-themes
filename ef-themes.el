@@ -67,6 +67,7 @@
     ef-elea-light
     ef-filter-sun
     ef-frost
+    ef-oxocarbon-light
     ef-kanso-pearl
     ef-kassio
     ef-light
@@ -93,6 +94,7 @@
     ef-melissa-dark
     ef-night
     ef-owl
+    ef-gruvbox
     ef-rosa
     ef-symbiosis
     ef-trio-dark
