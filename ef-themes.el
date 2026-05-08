@@ -94,6 +94,7 @@
     ef-melissa-dark
     ef-night
     ef-owl
+    ef-gruvbox
     ef-rosa
     ef-symbiosis
     ef-trio-dark
@@ -1444,7 +1445,7 @@ text should not be underlined as well) yet still blend in."
     `(ediff-odd-diff-C ((,c :inherit ediff-even-diff-C)))
 ;;;; eglot
     `(eglot-mode-line ((,c :inherit bold :foreground ,modeline-info)))
-    `(eglot-diagnostic-tag-unnecessary-face ((,c :inherit ef-themes-underline-info)))
+    `(eglot-diagnostic-tag-unnecessary-face ((,c :inherit shadow :underline nil)))
 ;;;; eldoc
     ;; NOTE: see https://github.com/purcell/package-lint/issues/187
     (list 'eldoc-highlight-function-argument `((,c :inherit warning :background ,bg-warning)))
@@ -1567,6 +1568,31 @@ text should not be underlined as well) yet still blend in."
     `(font-lock-type-face ((,c :foreground ,type)))
     `(font-lock-variable-name-face ((,c :foreground ,variable)))
     `(font-lock-warning-face ((,c :foreground ,warning)))
+    ;; `(font-lock-bracket-face ((,c :foreground ,bracket)))
+;;;; native Treesit (Emacs 29+)
+    ;; Some modes (or user configs) use these extra faces to distinguish
+    ;; function/method calls from definitions. We support them and map calls
+    ;; to `fncall' if the theme provides it, otherwise fall back to `fnname'.
+    ;; `(font-lock-function-call-face ((,c :foreground ,(or fncall fnname))))
+    ;; `(font-lock-method-call-face ((,c :foreground ,(or fncall fnname))))
+    ;; Additional native faces commonly used by Treesit font-lock rules
+    `(font-lock-number-face ((,c :foreground ,constant)))
+    `(font-lock-escape-face ((,c :foreground ,rx-escape)))
+    `(font-lock-operator-face ((,c :foreground ,keyword)))
+    `(font-lock-property-name-face ((,c :inherit font-lock-variable-name-face)))
+    ;; Extra commonly used font-lock faces to better match editor themes
+    `(font-lock-attribute-face ((,c :inherit italic :foreground ,magenta)))
+    `(font-lock-namespace-face ((,c :foreground ,name)))
+    `(font-lock-tag-face ((,c :foreground ,name)))
+    `(font-lock-constructor-face ((,c :foreground ,type)))
+    `(font-lock-decorator-face ((,c :inherit italic :foreground ,magenta)))
+    `(font-lock-field-face ((,c :inherit italic :foreground ,magenta)))
+    `(font-lock-variable-use-face ((,c :foreground ,variable)))
+    `(font-lock-punctuation-face ((,c :foreground ,fg-dim)))
+    `(font-lock-delimiter-face ((,c :foreground ,fg-dim)))
+    `(font-lock-bracket-face ((,c :foreground ,fg-dim)))
+    ;; Function parameters: italic and colored to match Rosé Pine Dawn style
+    `(font-lock-parameter-face ((,c :inherit italic :foreground ,magenta)))
 ;;;; forge
     `(forge-dimmed ((,c :inherit shadow)))
     `(forge-issue-completed ((,c :inherit shadow)))
@@ -2477,17 +2503,20 @@ text should not be underlined as well) yet still blend in."
     `(trashed-restored ((,c :inherit ef-themes-mark-other)))
 ;;;; tree-sitter
     `(tree-sitter-hl-face:attribute ((,c :inherit font-lock-variable-name-face)))
+    `(tree-sitter-hl-face:constant ((,c :inherit font-lock-constant-face)))
     `(tree-sitter-hl-face:constant.builtin ((,c :inherit tree-sitter-hl-face:constant)))
+    `(tree-sitter-hl-face:number ((,c :inherit font-lock-constant-face)))
+    `(tree-sitter-hl-face:boolean ((,c :inherit font-lock-constant-face)))
     `(tree-sitter-hl-face:escape ((,c :inherit font-lock-regexp-grouping-backslash)))
     `(tree-sitter-hl-face:function ((,c :inherit font-lock-function-name-face)))
-    `(tree-sitter-hl-face:function.call ((,c :inherit tree-sitter-hl-face:function)))
+    `(tree-sitter-hl-face:function.call ((,c :foreground ,(or fncall fnname))))
     `(tree-sitter-hl-face:label (( )))
-    `(tree-sitter-hl-face:method.call (( )))
+    `(tree-sitter-hl-face:method.call ((,c :foreground ,(or fncall fnname))))
     `(tree-sitter-hl-face:operator ((,c :inherit bold)))
     `(tree-sitter-hl-face:property (( )))
     `(tree-sitter-hl-face:property.definition ((,c :inherit font-lock-variable-name-face)))
     `(tree-sitter-hl-face:punctuation (( )))
-    `(tree-sitter-hl-face:punctuation.bracket (( )))
+    ;; `(tree-sitter-hl-face:punctuation.bracket (( )))
     `(tree-sitter-hl-face:punctuation.delimiter (( )))
     `(tree-sitter-hl-face:punctuation.special ((,c :inherit font-lock-regexp-grouping-construct)))
     `(tree-sitter-hl-face:string.special ((,c :inherit tree-sitter-hl-face:string)))
